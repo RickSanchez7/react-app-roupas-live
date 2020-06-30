@@ -35,13 +35,13 @@ const Navbar = ({ currentUser }) => {
             <li>
               <FiMenu className='icon hamburger' onClick={handleClick} />
             </li>
-            <li className={`list1 ${menu}`}>
+            <li className={`list1 ${menu}`} onClick={handleClick}>
               <Link to='/products'>produtos</Link>
             </li>
-            <li className={`list1 ${menu}`}>
+            <li className={`list1 ${menu}`} onClick={handleClick}>
               <Link to='/services'>serviços</Link>
             </li>
-            <li className={`list1 ${menu}`}>
+            <li className={`list1 ${menu}`} onClick={handleClick}>
               <Link to='/about'>sobre</Link>
             </li>
             <li className='login'>
