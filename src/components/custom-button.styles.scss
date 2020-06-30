@@ -4,7 +4,7 @@
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 25px 0 25px;
+  padding: 0 25px;
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -26,14 +26,16 @@
     font-size: auto;
     margin-top: 16rem;
     padding: 0px 10px;
-    margin-left: 18px;
-  }
+    margin-left: auto;
+    margin-right: auto;
 
-  &.searchBar-btn {
-    margin-left: 5px;
-    padding: 0 25px;
-    border-radius: 3rem;
-    font-size: 15px;
+    @media screen and (max-width: 800px) {
+      min-width: unset;
+      height: 30px;
+      line-height: unset;
+      margin-left: auto;
+      width: 100%;
+    }
   }
 
   &.google-sign-in {

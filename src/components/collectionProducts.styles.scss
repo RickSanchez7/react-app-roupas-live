@@ -8,9 +8,14 @@
   width: 250px;
   margin-bottom: 1rem;
   align-items: center;
-  // margin-left: auto;
-  // margin-right: auto;
   padding-left: 1rem;
+
+  @media screen and (max-width: 800px) {
+    padding-left: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .image {
     width: 100%;
@@ -24,8 +29,21 @@
     }
   }
   .custom-btn {
-    position: absolute;
+    // position: absolute;
     display: none;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 8px;
+      line-height: unset;
+    }
   }
   &:hover {
     .image {
@@ -53,6 +71,18 @@
 
     .price {
       width: 10%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      .custom-btn {
+        opacity: unset;
+      }
     }
   }
 }

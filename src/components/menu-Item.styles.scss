@@ -48,6 +48,10 @@
     font-size: 22px;
     color: #4a4a4a;
     text-transform: uppercase;
+
+    @media screen and (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 
   .subtitle {
