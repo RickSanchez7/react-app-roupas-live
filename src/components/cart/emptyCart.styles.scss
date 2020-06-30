@@ -1,0 +1,28 @@
+.section-title {
+  display: grid;
+  justify-content: center;
+  text-transform: capitalize;
+  margin-top: 100px;
+}
+
+.btn {
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  font-family: "Open Sans Condensed";
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  background-color: grey;
+  border: 1px solid grey;
+  text-decoration: none;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+}

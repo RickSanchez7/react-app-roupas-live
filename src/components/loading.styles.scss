@@ -1,0 +1,15 @@
+img {
+  width: 100%;
+  display: block;
+}
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  letter-spacing: 0.5px;
+}
+.loading img {
+  width: 10rem;
+  margin: 0 auto;
+}

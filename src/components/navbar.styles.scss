@@ -1,0 +1,167 @@
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  background-color: white;
+}
+
+.header-container {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 10px;
+
+  .title {
+    width: 125px;
+    height: 50px;
+    line-height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+
+  .searchBar {
+    margin: 5px auto 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .btn {
+      margin-left: 20px;
+    }
+  }
+
+  input {
+    width: 30em;
+    border-radius: 3rem;
+    height: 40px;
+  }
+
+  .logo {
+    width: 50px;
+    margin-left: 1em;
+  }
+}
+
+nav {
+  display: flex;
+  font-size: 1.4em;
+  background-color: aqua;
+  height: 2em;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+
+  .nav-container {
+    display: flex;
+    margin-top: 0.75em;
+    width: 100%;
+  }
+  a,
+  .option {
+    text-decoration: none;
+    margin: 0 1em;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      color: gray;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .login {
+    margin-left: auto;
+  }
+  .cart {
+    padding-top: 8px;
+    font-size: 1.2em;
+    margin: 0px;
+    transition: all 0.3s linear;
+    &:hover {
+      color: gray;
+    }
+  }
+  .amount {
+    // margin-top: 10px;
+    font-size: 1.2em;
+    // margin-right: 100px;
+    margin-left: 0.2em;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    input {
+      width: 15em;
+    }
+  }
+  nav {
+    .nav-container {
+      margin-top: 0;
+    }
+    .nav-container ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      justify-content: space-between;
+    }
+
+    .list1 {
+      display: grid;
+      background-color: #00ffff;
+      text-align: left;
+      width: 100%;
+      // height: 100%;
+      order: 3;
+      // opacity: 0.75;
+      z-index: 2;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      // margin-top: 180px;
+      // transform: translateX(-80%);
+    }
+    .show-links {
+      display: none;
+    }
+    .list1 {
+      transition: all 0.3s linear;
+      &:hover {
+        padding-left: 0.5rem;
+      }
+    }
+    .option {
+      padding-top: 10px;
+    }
+
+    .icon {
+      font-size: 1.2em;
+    }
+
+    .hamburger {
+      padding-top: 0.2em;
+      margin-left: 2rem;
+      font-size: 1.5em;
+      color: white;
+      display: block;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
