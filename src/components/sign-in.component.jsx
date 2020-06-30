@@ -32,7 +32,7 @@ const SignIn = () => {
 
   return (
     <div className='sign-in'>
-      <h2>Inicie Sessão</h2>
+      <h2 className='title'>Inicie Sessão</h2>
       <form onSubmit={handleSubmit}>
         <FormInput
           type='email'
