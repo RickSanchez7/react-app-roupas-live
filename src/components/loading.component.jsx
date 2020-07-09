@@ -1,6 +1,6 @@
-import React from "react";
-import loading from "../assets/Spinner.gif";
-import "./loading.styles.scss";
+import React from 'react';
+import loading from '../assets/Spinner.gif';
+import './loading.styles.scss';
 
 const Loading = () => {
   return (
