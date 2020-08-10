@@ -43,18 +43,16 @@ header {
   }
 }
 
-nav {
+.nav-container {
   display: flex;
-  font-size: 1.4em;
+  margin-top: 0.75em;
+  width: 100%;
   background-color: aqua;
+  font-size: 1.4em;
+  align-items: center;
   height: 2em;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
 
-  .nav-container {
-    display: flex;
-    margin-top: 0.75em;
-    width: 100%;
-  }
   a,
   .option {
     text-decoration: none;
@@ -79,7 +77,6 @@ nav {
     list-style-type: none;
     display: flex;
     align-items: center;
-    margin-top: 0px;
     width: 100%;
   }
 
@@ -87,7 +84,6 @@ nav {
     margin-left: auto;
   }
   .cart {
-    padding-top: 8px;
     font-size: 1.2em;
     margin: 0px;
     transition: all 0.3s linear;
@@ -104,34 +100,31 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .header-container {
+  .nav-container {
+    display: flex;
     flex-wrap: wrap;
-    input {
-      width: 15em;
-    }
-  }
-  nav {
-    .nav-container {
-      margin-top: 0;
-    }
-    .nav-container ul {
+    margin-top: 0;
+    align-items: center;
+    height: 2em;
+    padding-top: 1px;
+
+    ul {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
       padding-left: 0;
       justify-content: space-between;
     }
 
     .list1 {
-      display: grid;
+      display: block;
       background-color: #00ffff;
+      line-height: 200%;
       text-align: left;
       width: 100%;
-
       order: 3;
-
       z-index: 2;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
     }
     .show-links {
       display: none;
@@ -151,11 +144,11 @@ nav {
     }
 
     .hamburger {
-      padding-top: 0.2em;
-      margin-left: 2rem;
+      display: flex;
       font-size: 1.5em;
       color: white;
-      display: block;
+      margin-left: 20px;
+      // display: block;
       &:hover {
         color: gray;
       }
