@@ -20,23 +20,6 @@ header {
     margin-top: 0;
   }
 
-  .searchBar {
-    margin: 5px auto 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .btn {
-      margin-left: 20px;
-    }
-  }
-
-  input {
-    width: 30em;
-    border-radius: 3rem;
-    height: 40px;
-  }
-
   .logo {
     width: 50px;
     margin-left: 1em;
@@ -49,9 +32,12 @@ header {
   width: 100%;
   background-color: aqua;
   font-size: 1.4em;
-  align-items: center;
   height: 2em;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+
+  .list2 {
+    display: flex;
+  }
 
   a,
   .option {
@@ -84,7 +70,6 @@ header {
     margin-left: auto;
   }
   .cart {
-    font-size: 1.2em;
     margin: 0px;
     transition: all 0.3s linear;
     &:hover {
@@ -93,7 +78,6 @@ header {
   }
   .amount {
     font-size: 1.2em;
-
     margin-left: 0.2em;
     color: white;
   }
@@ -102,30 +86,38 @@ header {
 @media screen and (max-width: 768px) {
   .nav-container {
     display: flex;
-    flex-wrap: wrap;
     margin-top: 0;
     align-items: center;
-    height: 2em;
+    height: auto;
     padding-top: 1px;
 
     ul {
-      display: flex;
       flex-wrap: wrap;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
       padding-left: 0;
       justify-content: space-between;
+      line-height: 20px;
+      height: 2em;
+    }
+
+    .list2 {
+      display: flex;
+      flex-direction: column;
+      order: 3;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
     }
 
     .list1 {
-      display: block;
       background-color: #00ffff;
       line-height: 200%;
       text-align: left;
       width: 100%;
-      order: 3;
       z-index: 2;
     }
+
     .show-links {
       display: none;
     }
@@ -134,9 +126,6 @@ header {
       &:hover {
         padding-left: 0.5rem;
       }
-    }
-    .option {
-      padding-top: 10px;
     }
 
     .icon {
@@ -148,7 +137,6 @@ header {
       font-size: 1.5em;
       color: white;
       margin-left: 20px;
-      // display: block;
       &:hover {
         color: gray;
       }

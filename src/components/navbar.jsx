@@ -1,21 +1,21 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { FiMenu } from "react-icons/fi";
-import { FaShoppingCart } from "react-icons/fa";
-import logo from "../assets/diamante.svg";
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FiMenu } from 'react-icons/fi';
+import { FaShoppingCart } from 'react-icons/fa';
+import logo from '../assets/diamante.svg';
 
-import { CartContext } from "../context/cart.context";
-import Titulo from "../assets/titulo.jpg";
-import { auth } from "../firebase/firebase.utils";
+import { CartContext } from '../context/cart.context';
+import Titulo from '../assets/titulo.jpg';
+import { auth } from '../firebase/firebase.utils';
 
-import "./navbar.styles.scss";
+import './navbar.styles.scss';
 
 const Navbar = ({ currentUser }) => {
   const { cartItems } = useContext(CartContext);
 
   const [showLinks, setShowlinks] = useState(false);
 
-  const menu = showLinks ? null : "show-links";
+  const menu = showLinks ? null : 'show-links';
 
   const handleClick = () => {
     setShowlinks(!showLinks);
@@ -35,15 +35,17 @@ const Navbar = ({ currentUser }) => {
             <li>
               <FiMenu className='icon hamburger' onClick={handleClick} />
             </li>
-            <li className={`list1 ${menu}`} onClick={handleClick}>
-              <Link to='/products'>produtos</Link>
-            </li>
-            <li className={`list1 ${menu}`} onClick={handleClick}>
-              <Link to='/services'>serviços</Link>
-            </li>
-            <li className={`list1 ${menu}`} onClick={handleClick}>
-              <Link to='/about'>sobre</Link>
-            </li>
+            <div className='list2'>
+              <li className={`list1 ${menu}`} onClick={handleClick}>
+                <Link to='/products'>produtos</Link>
+              </li>
+              <li className={`list1 ${menu}`} onClick={handleClick}>
+                <Link to='/services'>serviços</Link>
+              </li>
+              <li className={`list1 ${menu}`} onClick={handleClick}>
+                <Link to='/about'>sobre</Link>
+              </li>
+            </div>
             <li className='login'>
               {currentUser ? (
                 <div className='option' onClick={() => auth.signOut()}>
