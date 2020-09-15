@@ -15,6 +15,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
   }
 
   .image {
@@ -26,33 +27,27 @@
 
     &:hover {
       opacity: 0.75;
+      .custom-btn {
+        display: block;
+      }
     }
-  }
-  .custom-btn {
-    // position: absolute;
-    display: none;
-
-    @media screen and (max-width: 800px) {
-      display: block;
-      opacity: 0.9;
-      min-width: unset;
-      width: 80%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    @media screen and (max-width: 600px) {
-      font-size: 8px;
-      line-height: unset;
-    }
-  }
-  &:hover {
-    .image {
-      opacity: 0.8;
-    }
-
     .custom-btn {
-      opacity: 0.85;
-      display: flex;
+      display: none;
+      &:hover {
+        opacity: 0.85;
+      }
+
+      @media screen and (max-width: 800px) {
+        display: block;
+        min-width: unset;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 10px;
+        line-height: unset;
+      }
     }
   }
 

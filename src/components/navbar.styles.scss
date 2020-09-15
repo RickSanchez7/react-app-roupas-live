@@ -102,12 +102,16 @@ header {
     }
 
     .list2 {
+      position: absolute;
+      top: 124px;
       display: flex;
       flex-direction: column;
       order: 3;
       align-items: center;
-      width: 100%;
+      width: 40%;
       flex-wrap: wrap;
+      left: -100%;
+      transition: all 0.3s linear;
     }
 
     .list1 {
@@ -115,17 +119,15 @@ header {
       line-height: 200%;
       text-align: left;
       width: 100%;
-      z-index: 2;
-    }
-
-    .show-links {
-      display: none;
-    }
-    .list1 {
       transition: all 0.3s linear;
+      z-index: 2;
       &:hover {
         padding-left: 0.5rem;
       }
+    }
+
+    .show-links {
+      left: 0%;
     }
 
     .icon {

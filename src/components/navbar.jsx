@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
-import { FaShoppingCart } from 'react-icons/fa';
+import { RiShoppingBagLine } from 'react-icons/ri';
 import logo from '../assets/diamante.svg';
 
 import { CartContext } from '../context/cart.context';
@@ -35,14 +35,14 @@ const Navbar = ({ currentUser }) => {
             <li>
               <FiMenu className='icon hamburger' onClick={handleClick} />
             </li>
-            <div className='list2'>
-              <li className={`list1 ${menu}`} onClick={handleClick}>
+            <div className={`list2 ${menu}`} onClick={handleClick}>
+              <li className='list1'>
                 <Link to='/products'>produtos</Link>
               </li>
-              <li className={`list1 ${menu}`} onClick={handleClick}>
+              <li className='list1'>
                 <Link to='/services'>serviços</Link>
               </li>
-              <li className={`list1 ${menu}`} onClick={handleClick}>
+              <li className='list1'>
                 <Link to='/about'>sobre</Link>
               </li>
             </div>
@@ -57,7 +57,7 @@ const Navbar = ({ currentUser }) => {
             </li>
             <li>
               <Link to='/cart'>
-                <FaShoppingCart className='cart' />
+                <RiShoppingBagLine className='cart' />
                 <span className='amount'>{cartItems}</span>
               </Link>
             </li>
