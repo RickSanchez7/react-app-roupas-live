@@ -15,7 +15,7 @@ const Navbar = ({ currentUser }) => {
 
   const [showLinks, setShowlinks] = useState(false);
 
-  const menu = showLinks ? null : 'show-links';
+  const menu = showLinks ? 'show-links' : null;
 
   const handleClick = () => {
     setShowlinks(!showLinks);
@@ -42,7 +42,7 @@ const Navbar = ({ currentUser }) => {
               <li className='list1'>
                 <Link to='/services'>serviços</Link>
               </li>
-              <li className='list1'>
+              <li className='list1 about'>
                 <Link to='/about'>sobre</Link>
               </li>
             </div>
