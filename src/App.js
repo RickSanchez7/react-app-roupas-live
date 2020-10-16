@@ -11,10 +11,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Error from './pages/error';
 import Navbar from './components/navbar';
 import Loading from './components/loading.component';
+import ScroolButton from './components/scrollButton';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
-import './App.css';
+import './App.scss';
 
 //React.lazy Loading
 const Home = lazy(() => import('./pages/home'));
@@ -53,6 +54,7 @@ function App() {
     <>
       <Router>
         <Navbar currentUser={currentUser} />
+        <ScroolButton />
         <Switch>
           <Suspense fallback={<Loading />}>
             <Route exact path='/'>

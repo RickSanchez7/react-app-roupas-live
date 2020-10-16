@@ -11,6 +11,7 @@ const Products = () => {
     return <Loading />;
   }
   return products.map(({ id, ...items }) => (
+    
     <ProductList classname='products' key={id} {...items} />
   ));
 };

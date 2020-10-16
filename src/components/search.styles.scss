@@ -1,0 +1,28 @@
+.search {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+
+  &-icon {
+    margin-left: 8px;
+    margin-right: 20px;
+  }
+
+  &-input {
+    margin-left: 0;
+    padding: 0;
+    opacity: 0;
+    width: 0px;
+    transition: width 0.5s;
+  }
+
+  .show {
+    margin-left: 10px;
+    padding: 0 10px;
+    opacity: 1;
+    width: 200px;
+  }
+}
