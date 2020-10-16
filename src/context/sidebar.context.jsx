@@ -1,7 +1,7 @@
 import React, {useReducer, createContext} from 'react'
 
-import reducer from './useReducer/sidebar-reducer'
-import {TOGGLE, CLOSE} from './useReducer/sidebar-actions'
+import {sidebarReducer} from './useReducer/sidebar/sidebar-reducer'
+import {TOGGLE, CLOSE} from './useReducer/sidebar/sidebar-actions'
 
 const SidebarContext = createContext()
 
@@ -11,7 +11,7 @@ const SidebarProvider = ({children}) => {
     showLinks: false
   }
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(sidebarReducer, initialState)
 
   const closeSidebar = () =>{
     dispatch({

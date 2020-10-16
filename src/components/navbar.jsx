@@ -17,7 +17,7 @@ const Navbar = ({ currentUser }) => {
 
   const {closeSidebar, toggleSidebar, state} = useContext(SidebarContext)
 
-  
+
   const menu = state.showLinks ? 'show-links' : null;
 
   return (
@@ -34,7 +34,7 @@ const Navbar = ({ currentUser }) => {
             <li>
               <FiMenu className='icon hamburger' onClick={toggleSidebar} />
             </li>
-            <div className={`list2 ${menu}`} onClick={toggleSidebar}>
+            <div className={`list2 ${menu}`} onClick={closeSidebar}>
               <li className='list1'>
                 <Link to='/products'>produtos</Link>
               </li>

@@ -9,7 +9,7 @@ import StripeButton from "../components/stripe-button.component";
 import "./cart.styles.scss";
 
 const Cart = ({ currentUser }) => {
-  const { total, cart } = useContext(CartContext);
+  const { total, cart, clearCart } = useContext(CartContext);
 
   if (cart.length === 0) {
     return <EmptyCart />;
@@ -17,7 +17,16 @@ const Cart = ({ currentUser }) => {
 
   return (
     <section className='section-title'>
-      <h2>carrinho</h2>
+      <h2 className='cart-title'>carrinho</h2>
+            <button
+          type='button'
+          className='clear-cart'
+          onClick={() => {
+            clearCart();
+          }}
+        >
+          Apagar Carrinho
+        </button>
       {cart.map(item => {
         return <CartItem key={item.id} {...item} />;
       })}

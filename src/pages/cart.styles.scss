@@ -2,6 +2,26 @@
   width: 85vw;
   margin: 60px auto;
 
+  .cart-title {
+    font-size: 1.8rem;
+  }
+
+  .clear-cart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #afafaf;
+    letter-spacing: 0.3rem;
+    margin-left: auto;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #525252;
+    }
+  }
+
   .btn-stripe {
     margin-left: auto;
     margin-top: 50px;

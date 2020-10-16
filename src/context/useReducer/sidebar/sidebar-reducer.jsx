@@ -1,7 +1,6 @@
 import {TOGGLE, CLOSE} from './sidebar-actions'
 
-
-  const reducer = (state, action) => {
+export const sidebarReducer = (state, action) => {
     switch (action.type) {
       case TOGGLE:
         return {
@@ -16,7 +15,6 @@ import {TOGGLE, CLOSE} from './sidebar-actions'
           default:
             return state
     }
-  }
+}
 
 
-export default reducer
