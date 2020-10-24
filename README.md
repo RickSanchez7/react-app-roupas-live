@@ -2,10 +2,12 @@ E-commerce Plataform
 
 
 
-Register, Sign-In, Sign-In with Google,...
+Register, Sign-In, Sign-In with Google's Firebase,...
 
 React & React hooks
 
-Firebase
+Context API and useReducer for state management
 
-Stripe
+Fetching data from Google's Firestore
+
+Stripe for payments
