@@ -1,6 +1,6 @@
 .hero {
   min-height: 80vh;
-  background: url("../assets/Banner2000px.jpg") center/cover no-repeat;
+  background: url('../assets/Banner2000px.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,18 +10,18 @@
 @media screen and (max-width: 1000px) {
   .hero {
     min-height: 70vh;
-    background: url("../assets/Banner1000px.jpg") center/cover no-repeat;
+    background: url('../assets/Banner1000px.jpg') center/cover no-repeat;
   }
 }
 @media screen and (max-width: 800px) {
   .hero {
     min-height: 65vh;
-    background: url("../assets/Banner800px.jpg") center/cover no-repeat;
+    background: url('../assets/Banner800px.jpg') center/cover no-repeat;
   }
 }
 @media screen and (max-width: 415px) {
   .hero {
     min-height: 65vh;
-    background: url("../assets/Banner415px.jpg") center/cover no-repeat;
+    background: url('../assets/Banner415px.jpg') center/cover no-repeat;
   }
 }
