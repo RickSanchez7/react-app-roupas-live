@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 // import ShopData from '../pages/ShopData';
-import {firestore} from '../firebase/firebase.utils'
+import { firestore } from '../firebase/firebase.utils';
 
 export const ProductContext = createContext();
 
@@ -8,11 +8,15 @@ const ProductProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
 
+  console.log('p', products);
+
   useEffect(() => {
     setLoading(true);
-    firestore.collection('collections').onSnapshot(snapshot => 
-      setProducts(snapshot.docs.map(doc => doc.data()))
-    )
+    firestore
+      .collection('collections')
+      .onSnapshot(snapshot =>
+        setProducts(snapshot.docs.map(doc => doc.data()))
+      );
     setLoading(false);
     return () => {};
   }, []);

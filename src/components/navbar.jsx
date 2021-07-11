@@ -6,7 +6,7 @@ import { RiShoppingBagLine } from 'react-icons/ri';
 import logo from '../assets/diamante.svg';
 
 import { CartContext } from '../context/cart.context';
-import {SidebarContext}  from '../context/sidebar.context';
+import { SidebarContext } from '../context/sidebar.context';
 import Titulo from '../assets/titulo.jpg';
 import { auth } from '../firebase/firebase.utils';
 
@@ -15,8 +15,7 @@ import './navbar.styles.scss';
 const Navbar = ({ currentUser }) => {
   const { cartItems } = useContext(CartContext);
 
-  const {closeSidebar, toggleSidebar, state} = useContext(SidebarContext)
-
+  const { closeSidebar, toggleSidebar, state } = useContext(SidebarContext);
 
   const menu = state.showLinks ? 'show-links' : null;
 
@@ -57,7 +56,9 @@ const Navbar = ({ currentUser }) => {
             <li onClick={closeSidebar}>
               <Link to='/cart'>
                 <RiShoppingBagLine className='cart' />
-                <span className='amount'>{cartItems}</span>
+                <span data-testid='navbarAmount' className='amount'>
+                  {cartItems}
+                </span>
               </Link>
             </li>
           </ul>

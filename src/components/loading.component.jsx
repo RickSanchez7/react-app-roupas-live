@@ -4,7 +4,7 @@ import './loading.styles.scss';
 
 const Loading = () => {
   return (
-    <div className='loading'>
+    <div data-testid='loadingId' className='loading'>
       <img src={loading} alt='loading gif' />
     </div>
   );
